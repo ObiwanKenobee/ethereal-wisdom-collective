@@ -1,24 +1,22 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+    <div className="min-h-screen flex items-center justify-center bg-cosmic-dark px-6">
+      <div className="cosmic-card max-w-md w-full text-center">
+        <div className="mb-6">
+          <div className="inline-block h-24 w-24 rounded-full bg-cosmic-medium/40 flex items-center justify-center mb-4">
+            <div className="text-6xl font-bold text-celestial-purple">404</div>
+          </div>
+        </div>
+        <h1 className="text-2xl font-bold mb-4 text-white">Consciousness Not Found</h1>
+        <p className="text-white/70 mb-6">
+          The path you seek has either dissolved into the cosmos or has yet to materialize into this reality.
+        </p>
+        <Link to="/" className="cosmic-button inline-flex">
+          Return to Awareness
+        </Link>
       </div>
     </div>
   );
